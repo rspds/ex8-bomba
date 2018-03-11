@@ -165,19 +165,8 @@ void controle()
 			tempo = millis();
 		}
 }
-/*
-	 falta algo tlg
-	 algo
-	 implementar a ativacao inicial das bombas de algum jeito que eu ainda nao sei
-	 ver como vai ligar o led do erro na trocaBomba()
-	 e por falat nisso, tenhi minhas duvidas se esse é mesmo o caminho mais correto a seguir
-	 "priorizar a trocaBomba() pra fazer tudo"
-	 sinto que está faltando uma ou duas funcoes pra o codigo ficar estavel
-	 e depois pra o codigo ficar enchuto vai poder reduzir cerca de 22% do codigo em
-	 partes de funcoes ou 2 funcoes jogadas no lixo mesmo
 
-	 a variavel necessidade ja e uma chaveeeee!!!!
- */
+
 bool trocaBomba()
 {
 	byte bombaDesl;
