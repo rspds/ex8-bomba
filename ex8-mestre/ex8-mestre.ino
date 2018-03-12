@@ -50,7 +50,7 @@ bool trava = 0;
 
 */
 
-enum { TEMP1,//PACKET1,
+enum { TEMP1,
 			 TEMP2,
 			 NIV_INF,
 			 NIV_SUP,
@@ -58,6 +58,7 @@ enum { TEMP1,//PACKET1,
 			 VAZAO,
 			 QTD_ERRO_B1,
 			 QTD_ERRO_B2,
+			 BOMBA,
        TOTAL_NO_OF_PACKETS
      };
 
@@ -88,6 +89,7 @@ void setup()
   modbus_construct (&packets[VAZAO], 1, PRESET_SINGLE_REGISTER, 5, 1, 5);
   modbus_construct (&packets[QTD_ERRO_B1], 1, PRESET_SINGLE_REGISTER, 6, 1, 6);
   modbus_construct (&packets[QTD_ERRO_B2], 1, PRESET_SINGLE_REGISTER, 7, 1, 7);
+  modbus_construct (&packets[BOMBA], 1, PRESET_SINGLE_REGISTER, 8, 1, 8);
 
 
 
@@ -123,6 +125,7 @@ void loop()
   regs[VAZAO] = vazao;
   regs[QTD_ERRO_B1] = bombaErro[0];
   regs[QTD_ERRO_B2] = bombaErro[1];
+  regs[BOMBA] = bombaAtual;
        
 
 	delay(1000);
