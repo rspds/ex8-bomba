@@ -33,7 +33,7 @@ int lineC1[QUANT_C1] = {0,1},
 		bomba_escolhida;
 
 float temp[2] = {60, 45},
-			niv[2] = 20,
+			niv[2] = {20, 50},
 			corrente = 8,
 			vazao = 6;
 
@@ -47,8 +47,6 @@ boolean menu_flag  = 0,
 byte bombaAtual,
 		 bombaErro[2];
 
-unsigned int holdingRegs[HOLDING_REGS_SIZE];
-
 enum{ TEMP1,
 		  TEMP2,
 		  NIV_INF,
@@ -61,7 +59,7 @@ enum{ TEMP1,
       HOLDING_REGS_SIZE
 };
 
-
+unsigned int holdingRegs[HOLDING_REGS_SIZE];
 
 void setup()
 {
